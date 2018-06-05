@@ -65,13 +65,3 @@ simplify e                             = e
 
 simplifyEnd e | simplify e == e = e
               | otherwise = simplifyEnd $ simplify e
-
--- simplifyEnd (Plus e1 e2) | simplify e1 == e1 && simplify e2 == e2 = simplify (Plus e1 e2)
-                         -- | otherwise                              = simplifyEnd (Plus (simplify e1) (simplify e2))
--- simplifyEnd (Minus e1 e2) | simplify e1 == e1 && simplify e2 == e2 = simplify (Minus e1 e2)
-                          -- | otherwise                              = simplifyEnd (Minus (simplify e1) (simplify e2))
--- simplifyEnd (Multi e1 e2) | simplify e1 == e1 && simplify e2 == e2 = simplify (Multi e1 e2)
-                          -- | otherwise                              = simplifyEnd (Multi (simplify e1) (simplify e2))
--- simplifyEnd (Div e1 e2) | simplify e1 == e1 && simplify e2 == e2 = simplify (Div e1 e2)
-                        -- | otherwise                              = simplifyEnd (Div (simplify e1) (simplify e2))
--- simplifyEnd e = e                        
